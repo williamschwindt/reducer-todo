@@ -12,14 +12,18 @@ const TodoForm = () => {
         setNewItem(e.target.value);
     }
 
-    const submitHandler = (e) => {
+    const toggleCompleted = (itemID) => {
+        dispatch({ type: "TOGGLE_COMPLETED", payload: itemID });
+    }
+
+    const submitHandler = (e, newItem) => {
         e.preventDefault();
         dispatch({ type: "ADD_TODO", payload: newItem });
     }
 
     return (
         <div>
-            <TodoList list={state}/>
+            <TodoList state={state.todoList} toggleCompleted={toggleCompleted} list={state.todoList}/>
             <div className="form">
                 <input value={newItem} onChange={changeHandler}/>
                 <button onClick={submitHandler}>Add Item</button>
