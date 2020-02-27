@@ -46,6 +46,17 @@ export const listReducer = (state, action) => {
                     return item;
                 })
             }
+        case "CLEAR_COMPLETED" :
+            return {
+                ...state,
+                todoList: state.todoList.filter(item => {
+                    if(item.completed === false) {
+                        return {
+                            item
+                        }
+                    }
+                })
+            }
         default:
             return state;
     }

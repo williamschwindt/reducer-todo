@@ -22,12 +22,18 @@ const TodoForm = () => {
         dispatch({ type: "ADD_TODO", payload: newItem });
     }
 
+    const  clearHandler = (e) => {
+        e.preventDefault();
+        dispatch({ type: "CLEAR_COMPLETED" })
+    }
+
     return (
         <div>
             <TodoList state={state.todoList} toggleCompleted={toggleCompleted} list={state.todoList}/>
             <div className="form">
                 <input value={newItem} onChange={changeHandler}/>
                 <button onClick={submitHandler}>Add Item</button>
+                <button onClick={clearHandler}>Clear Completed Items</button>
             </div>
         </div>
     )
