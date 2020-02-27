@@ -40,7 +40,7 @@ export const listReducer = (state, action) => {
                     if(item.id === action.payload) {
                         return {
                             ...item,
-                            completed: true
+                            completed: !item.completed
                         }
                     }
                     return item;
