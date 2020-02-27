@@ -13,10 +13,11 @@ const TodoForm = () => {
     }
 
     const toggleCompleted = (itemID) => {
+        console.log("this one", itemID);
         dispatch({ type: "TOGGLE_COMPLETED", payload: itemID });
     }
 
-    const submitHandler = (e, newItem) => {
+    const submitHandler = (e) => {
         e.preventDefault();
         dispatch({ type: "ADD_TODO", payload: newItem });
     }

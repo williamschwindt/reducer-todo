@@ -33,13 +33,14 @@ export const listReducer = (state, action) => {
                 todoList: [ ...state.todoList, newItem]
             };
         case "TOGGLE_COMPLETED" :
+            console.log("toggle completed", action.payload)
             return {
                 ...state,
                 todoList: state.todoList.map(item => {
                     if(item.id === action.payload) {
                         return {
                             ...item,
-                            completed: !item.completed
+                            completed: true
                         }
                     }
                     return item;
