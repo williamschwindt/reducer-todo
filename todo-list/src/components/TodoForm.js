@@ -28,13 +28,12 @@ const TodoForm = () => {
     }
 
     return (
-        <div>
+        <div className="form">
+            <h1>Your Todo List</h1>
+            <input value={newItem} onChange={changeHandler}/>
+            <button className="button" onClick={submitHandler}>Add Item</button>
             <TodoList state={state.todoList} toggleCompleted={toggleCompleted} list={state.todoList}/>
-            <div className="form">
-                <input value={newItem} onChange={changeHandler}/>
-                <button onClick={submitHandler}>Add Item</button>
-                <button onClick={clearHandler}>Clear Completed Items</button>
-            </div>
+            <button className="button" onClick={clearHandler}>Clear Completed Items</button>
         </div>
     )
 }
