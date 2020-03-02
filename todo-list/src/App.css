@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.completed {
+  text-decoration: line-through;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #2d2d37;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+}
+
+.form input {
+  font-size: 2rem;
+  font-family: 'Roboto';
+  background-color: #57576b;
+  border: 1px solid #e64944;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.button {
+  transition: .3s;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #e64944;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.button:hover {
+  transition: .3s;
+  color: #e64944;
+  background-color: #fff;
+  border: 1px solid #e64944;
+}
+
+.item {
+  font-size: 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
